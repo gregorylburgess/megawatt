@@ -3,9 +3,9 @@
 	<head>
 	    <title>{% block title %}{% endblock title %}</title>
 		<link rel="stylesheet" href="{{STATIC_URL}}css/style.css">
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-		<script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
+		<script src="{{STATIC_URL}}js/jquery-1.9.1.js"></script>
+		<script src="{{STATIC_URL}}js/jquery-ui.js"></script>
+		<script src="{{STATIC_URL}}js/jquery.cookie.js"></script>
 		<script src="{{STATIC_URL}}js/zones.js"></script>
 	</head>
 	
@@ -22,9 +22,22 @@
 			var cards = new Array();
 			var debug = false;
 			$(function(){
+				
+				{%for id, card in cards.items%}
+					temp = new Object();
+					temp.zone = "{{card.zone}}";
+					temp.id = "{{card.id}}";
+					temp.name = "{{card.name}}";
+					temp.stats = "{{card.stats}}";
+					temp.image = "{{card.image}}";
+					cards[{{card.id}}] = temp;
+				{% endfor%}
+				alert(cards[0].name);
 				$(".card").draggable();
 				$(".card").mouseover(function(eventObject){
-					$("#preview").html($(this).html().replace("card","preview"));
+					$("#preview-name").html(cards[this.id].name);
+					$("#preview-img").attr("src",cards[this.id].image);
+					
 				})
 				$(".field").droppable({
 					drop: function( event, ui ) {
@@ -35,15 +48,7 @@
 						child.css("left",0);
 					}
 				})
-				{%for player in players.items%}
-					{%for cards in player.cards.items%}
-						temp = new Object();
-						temp.zone = "{{card.zone}}";
-						temp.id = "{{card.id}}";
-						temp.stats = "{{card.stats}}";
-						cards[{{card.id}}] = temp;
-					{% endfor%}
-				{% endfor %}
+
 			});
 			
 			

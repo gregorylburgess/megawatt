@@ -1,10 +1,6 @@
-from megawatt.models import Card,Player
+from megawatt.models import Card,Player,PointSet
 from django.contrib import admin
 
-class MyCard(admin.TabularInline):
-    model = Card
-
-class MyPlayer(admin.TabularInline):
-    model = Player
-    
-admin.site.register(MyCard, MyPlayer)
+admin.site.register(Card)
+admin.site.register(Player)
+admin.site.register(PointSet)

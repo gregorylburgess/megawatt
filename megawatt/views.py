@@ -13,21 +13,20 @@ def index(request):
         name=i
         card = Card()
         card.id = i
-        card.name= str(i)
+        card.name= "card"+ str(i)
         card.field = "p2_field"
-        card.image = "http://a.dryicons.com/images/icon_sets/colorful_stickers_part_2_icons_set/png/256x256/light_bulb.png";
+        if i%2 ==1:
+            card.image = "http://a.dryicons.com/images/icon_sets/colorful_stickers_part_2_icons_set/png/256x256/light_bulb.png"
+        else:
+            card.image = "http://cdn1.iconfinder.com/data/icons/all_google_icons_symbols_by_carlosjj-du/128/lightbulb-y.png"
         cards[card.id]=card
     
-    p2 = Player()
-    p2.owned_cards = cards
-    players = {}
-    players[1]=(p2)
+
     return render_to_response(
               'index.html',
               {
                'STATIC_URL': STATIC_URL,
                'cards':cards,
-               'p2':p2,
                })
 @csrf_exempt
 def update(request, field, id):

@@ -37,14 +37,17 @@ body {
 
 .card {
 	float:left;
-	height: 45%;
+	height: 40%;
 	width: 10%;
+	margin-bottom: 4px;
 }
 
 .card-img img{
-	width: 90%;
+	background: #444;
+	width: 70%;
 	height: auto;
 }
+
 .field {
 	width: 95.5%;
 	height: 28.45%;
@@ -61,6 +64,15 @@ body {
 	background: #333;
 }
 
+.preview-name {
+	face: bold;
+	font-size: 20pt;
+}
+.preview-img {
+	width: 80%;
+	margin: 0% 10%;
+	height: 40%;;
+}
 
 .small-img {
 	height: 50px;

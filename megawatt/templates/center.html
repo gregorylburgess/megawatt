@@ -2,7 +2,7 @@
 <div>p1field</div>
 	{% for card in p2.owned_cards%}
 		<div class="card">{{card.name}}</div>
-		<img src="{{card.img}}">
+		<img src="{{card.image}}">
 	{% endfor %}
 </div>
 
@@ -10,19 +10,19 @@
 <div>neutral field</div>
 	{% for card in neutral_cards %}
 		<div class="card">{{card.name}}</div>
-		<img src="{{card.img}}">
+		<img src="{{card.image}}">
 	{% endfor %}
 </div>
 
 <div id="p2_field" class="field p2">
 <div>p2field</div>
-	{% for id, card in p2.owned_cards.items %}
+	{% for id, card in cards.items %}
 		<div id="{{card.id}}" class="card">
-			<div class="name">{{card.name}}</div>
-			<div class="card-img">
+			<div id="{{card.id}}-name" class="name">{{card.name}}</div>
+			<div id="{{card.id}}-img" class="card-img">
 				<img src="{{card.image}}"></img>
 			</div>
 		</div>
 	{% endfor %}
-	<div id="11" class="card" style="width:100px;height:100px;"><p>Drag me to my target</p></div>
+	
 </div>

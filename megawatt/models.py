@@ -2,7 +2,7 @@ from django.db import models
 
 class PointSet(models.Model):
     nrg = models.IntegerField()
-    user = models.IntegerField()
+    user = models.ForeignKey('Player')
     env = models.IntegerField()
     dollar = models.IntegerField()
     
@@ -13,7 +13,6 @@ class Player(models.Model):
 
     
 class Card(models.Model):
-    id = models.IntegerField()
     name = models.CharField(max_length=200)
     type = ("E_Gen", "Tactical", "Service")
     flavor_text = models.CharField(max_length=100)
