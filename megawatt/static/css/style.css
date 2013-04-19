@@ -1,0 +1,71 @@
+
+body {
+	background: #000;
+	width:100%;
+	height: 600px;
+	color: #fff;
+	display: block;
+	float: left;
+}
+
+#left {
+	background:#222;
+	width: 27%;
+	height: 100%;
+	margin: 8px;
+	float: left;
+	display: block;
+}
+
+#left #preview {
+	width:100%;
+	height: 77.5%;
+	margin: 8px 0px;
+	background: #333;
+}
+#center {
+	background:#222;
+	width: 60%;
+	height: 100%;
+	margin: 8px;
+	display: block;
+	float: left;
+}
+#neutral_field {
+	margin: 4px 8px;
+}
+
+.card {
+	float:left;
+	height: 45%;
+	width: 10%;
+}
+
+.card-img img{
+	width: 90%;
+	height: auto;
+}
+.field {
+	width: 95.5%;
+	height: 28.45%;
+	margin: 8px;
+	padding: 8px;
+	background: #333;
+	float: left;
+}
+
+
+.points {
+	width:100%;
+	height: 10%;
+	background: #333;
+}
+
+
+.small-img {
+	height: 50px;
+	width: 50px;
+}
+
+
+

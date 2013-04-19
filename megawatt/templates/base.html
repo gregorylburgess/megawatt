@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <title>{% block title %}{% endblock title %}</title>
+		<link rel="stylesheet" href="{{STATIC_URL}}css/style.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
+		<script src="{{STATIC_URL}}js/zones.js"></script>
+	</head>
+	
+	<body>
+		<div id="left">
+			{% include "left.html" %}
+		</div>
+		
+		<div id="center">
+			{% include "center.html" %}
+		</div>
+		
+		<script>//Lets cards be moved around the field.
+			var cards = new Array();
+			var debug = false;
+			$(function(){
+				$(".card").draggable();
+				$(".card").mouseover(function(eventObject){
+					$("#preview").html($(this).html().replace("card","preview"));
+				})
+				$(".field").droppable({
+					drop: function( event, ui ) {
+						checkForChange(this.id, ui.draggable.prop('id'));
+						$(this).append(ui.draggable);
+						var child = ui.draggable;
+						child.css("top",0);
+						child.css("left",0);
+					}
+				})
+				{%for player in players.items%}
+					{%for cards in player.cards.items%}
+						temp = new Object();
+						temp.zone = "{{card.zone}}";
+						temp.id = "{{card.id}}";
+						temp.stats = "{{card.stats}}";
+						cards[{{card.id}}] = temp;
+					{% endfor%}
+				{% endfor %}
+			});
+			
+			
+			function checkForChange(zone,id) {
+				if(cards[id]!=zone) {
+					var cookie = $.cookie('csrftoken'); 
+					$.ajax({
+						type: "POST",
+						url: "/update/"+zone+"/"+id+"/",
+						data: {
+							csrftoken: cookie,
+							},
+						success: function() {if (debug){alert("moved "+id+ " to "+zone);} },
+						error: function() {alert("post failed");},
+						});
+				}
+			}
+		</script>
+	</body>
+</html>
