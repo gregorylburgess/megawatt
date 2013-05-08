@@ -1,9 +1,11 @@
 <div id="p1_points" class="p1 points">
-p1score
-	{% for image, point in p1.score.items%}
-		<img src="{{image}}" class="small-img"></img>
-		<div class="point_label">{{point}}</div>
-	{% endfor %}
+<div>P1 Score</div>
+	<div class="pointbox">
+		{% for type, image, point in p1 %}
+			<img src="{{STATIC_URL}}{{image}}" class="small-img"></img>
+			<input id = "p1_{{type}}" class="point_label" type="textbox" value="{{point}}"></input>
+		{% endfor %}
+	</div>
 </div>
 
 <div id="preview" class="fullspan">
@@ -13,9 +15,11 @@ p1score
 </div>
 
 <div id="p2_points" class="p2 points">
-p2score
-	{% for image, point in p2.score.items%}
-		<img src="{{image}}" class="small-img"></img>
-		<div class="point_label">{{point}}</div>
-	{% endfor %}
+<div>P2 Score</div>
+	<div class="pointbox">
+		{% for type, image, point in p2 %}
+			<img src="{{STATIC_URL}}{{image}}" class="small-img"></img>
+			<input id = "p2_{{type}}" class="point_label" type="textbox" value="{{point}}"></input>
+		{% endfor %}
+	</div>
 </div>

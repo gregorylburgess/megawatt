@@ -1,0 +1,37 @@
+
+<div id ="p1_hand" class="hand">
+	<div>P1 hand</div>
+</div>
+
+<div id="e_gen_deck" class="deck">
+	<div>E_Gen Deck</div>
+	<a href="#">
+	<div id="e_gen_menu" class="menu">
+				<center>Draw Cards</center>
+	</div>
+	</a>
+</div>
+
+<div id="tactical_deck" class="deck">
+	<div>Tactical Deck</div>
+	<a href="#">
+	<div id="tactical_menu" class="menu">
+				<center>Draw Cards</center>
+	</div>
+	</a>
+</div>
+
+<div id ="p2_hand" class="hand">
+	<div>P2 hand</div>
+</div>
+
+<script>
+$("#e_gen_menu").hide();
+$("#tactical_menu").hide();
+
+$("#e_gen_deck").hover(function(){$("#e_gen_menu").fadeIn()},function(){$("#e_gen_menu").fadeOut()});
+$("#tactical_deck").hover(function(){$("#tactical_menu").fadeIn()},function(){$("#tactical_menu").fadeOut()});
+
+$("#e_gen_menu").click(function(){$("#e_gen_menu").fadeOut()});
+$("#tactical_menu").click(function(){$("#tactical_menu").fadeOut()});
+</script>

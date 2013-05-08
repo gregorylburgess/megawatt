@@ -5,22 +5,27 @@
 		<link rel="stylesheet" href="{{STATIC_URL}}css/style.css">
 		<script src="{{STATIC_URL}}js/jquery-1.9.1.js"></script>
 		<script src="{{STATIC_URL}}js/jquery-ui.js"></script>
+		
 		<script src="{{STATIC_URL}}js/jquery.cookie.js"></script>
 		<script src="{{STATIC_URL}}js/zones.js"></script>
 	</head>
 	
 	<body>
-		<div id="left">
+		<div id="left" class="pane">
 			{% include "left.html" %}
 		</div>
 		
-		<div id="center">
+		<div id="center" class="pane">
 			{% include "center.html" %}
 		</div>
 		
+		<div id="right" class="pane">
+			{% include "right.html" %}
+		</div>
 		<script>//Lets cards be moved around the field.
 			var cards = new Array();
 			var debug = false;
+			
 			$(function(){
 				
 				{%for id, card in cards.items%}
@@ -32,7 +37,6 @@
 					temp.image = "{{card.image}}";
 					cards[{{card.id}}] = temp;
 				{% endfor%}
-				alert(cards[0].name);
 				$(".card").draggable();
 				$(".card").mouseover(function(eventObject){
 					$("#preview-name").html(cards[this.id].name);
@@ -55,6 +59,7 @@
 			function checkForChange(zone,id) {
 				if(cards[id]!=zone) {
 					var cookie = $.cookie('csrftoken'); 
+					
 					$.ajax({
 						type: "POST",
 						url: "/update/"+zone+"/"+id+"/",

@@ -1,5 +1,5 @@
 <div id="p1_field" class="field p1">
-<div>p1field</div>
+<div>P1 Field</div>
 	{% for card in p2.owned_cards%}
 		<div class="card">{{card.name}}</div>
 		<img src="{{card.image}}">
@@ -7,7 +7,7 @@
 </div>
 
 <div id="neutral_field" class="field">
-<div>neutral field</div>
+<div>Neutral Field</div>
 	{% for card in neutral_cards %}
 		<div class="card">{{card.name}}</div>
 		<img src="{{card.image}}">
@@ -15,7 +15,7 @@
 </div>
 
 <div id="p2_field" class="field p2">
-<div>p2field</div>
+<div>P2 Field</div>
 	{% for id, card in cards.items %}
 		<div id="{{card.id}}" class="card">
 			<div id="{{card.id}}-name" class="name">{{card.name}}</div>

@@ -1,17 +1,15 @@
 from django.db import models
 
+class Player(models.Model):
+    owned_cards = []
+    
 class PointSet(models.Model):
+    player= models.ForeignKey(Player)
     nrg = models.IntegerField()
-    user = models.ForeignKey('Player')
     env = models.IntegerField()
     dollar = models.IntegerField()
-    
+    user = models.IntegerField()
 
-class Player(models.Model):
-    points = models.ForeignKey(PointSet)
-    owned_cards = []
-
-    
 class Card(models.Model):
     name = models.CharField(max_length=200)
     type = ("E_Gen", "Tactical", "Service")
