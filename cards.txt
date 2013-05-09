@@ -1,5 +1,3 @@
-####[Game Rules](https://github.com/gregorylburgess/megawatt/wiki/GameRules)
-####Cards
 E_Gen Cardset: 
 [n copies of each of the following, where n is the number of players]:
 
@@ -10,6 +8,7 @@ Success (7+)
 	+2 $
 "A 1 square-meter solar panel can output 100-200 watts of power in peak daylight."
 }
+
 Wind Farm {
 http://69.89.31.152/~altdaily/images/cmigration/windfarm-5-symbols-17870.jpg
 Success (6+)
@@ -17,6 +16,7 @@ Success (6+)
 	+2 $
 "One 1.8 MW wind turbine at a reasonable site would produce over 4,700,000 kWh of electricity each year, enough to meet the annual needs of over 1,000 households." -Strathclyde University statistic) 
 }
+
 Nuclear Power Plant: {
 http://www.arabianbusiness.com/incoming/article373922.ece/ALTERNATES/g3l/nuclear+plant.jpg
 Success (8+)
@@ -27,6 +27,7 @@ Fail
 	-2 [user_points]
 "Nuclear plant work by using heat from nuclear decay to heat water into steam and turn a turbine which generates electricity."
 }
+
 Hydro-Electric Dam: {
 http://www.proactiveinvestors.co.uk/genera//img/companies/news/hydroelectric350_4a4873c99e81a.jpg
 Success (7+)
@@ -34,6 +35,7 @@ Success (7+)
 	+3 $
 Hydro electricity is "a flexible source of electricity since plants can be ramped up and down very quickly to adapt to changing energy demands. However, damming ... can harm local ecosystems, and building large dams and reservoirs often involves displacing people and wildlife. -Wikipedia"
 }
+
 Tidal Generator: {
 http://www.solarpowernotes.com/renewable-energy/tidal-energy/tidal-energy-generator-seag.jpg
 Success (8+)
@@ -41,6 +43,7 @@ Success (8+)
 	+2 $
 "Tides are more predictable than wind energy and solar power, but harnessing Tidal energy tends to be more expensive than either. -Wikipedia"
 }
+
 Geo-Thermal Plant: {
 http://newsimg.bbc.co.uk/media/images/45579000/jpg/_45579485_lavalake.jpg
 Success (7+)
@@ -48,6 +51,7 @@ Success (7+)
 	+3 $
 "The emission intensity of existing geothermal electric plants is on average 122 kg of CO2 per megawatt-hour (MW·h) of electricity, about one-eighth of a conventional coal-fired plant -Wikipedia"
 }
+
 Biomass Plant: {
 http://assets.inhabitat.com/files/Teesside-Biomass-Power-Plant-1.jpg
 Success (8+)
@@ -55,6 +59,7 @@ Success (8+)
 	+3 $
 "Because biomass technologies use combustion processes to produce electricity, they can generate electricity at any time, unlike wind and most solar technologies, which only produce when the wind is blowing or sun is shining. Biomass power plants currently represent 11,000 MW - the second largest amount of renewable energy in the nation. -powerscorecard.org"
 }
+
 Coal-Burning Power Plant: {
 http://blog.enn.com/wp-content/uploads/2009/06/smoke-stack-jj-00112.jpg
 Success (8+)
@@ -63,6 +68,7 @@ Success (8+)
 	+X NRG
 "Coal generates 44% of our electricity, and is the single biggest air polluter in the U.S. -ucsusa.org"
 }
+
 [3n copies of each of the following, where n is the number of players]:
 Peaker Plant: {
 http://blogs.democratandchronicle.com/520/files/2009/12/smoke-stack.jpg
@@ -72,6 +78,7 @@ Success (6+)
 	+ 2 NRG
 "[Peaker plants] are power plants that generally run only when there is a high demand, known as peak demand, for electricity. Because they supply power only occasionally, the power supplied commands a much higher price per kilowatt hour -wikipedia"
 }
+
 Incinerator: {
 http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Kwai_Chung_Incineration_Plant.jpg/300px-Kwai_Chung_Incineration_Plant.jpg
 Success (8+)
@@ -80,6 +87,10 @@ Success (8+)
 	+2 NRG
 "Incineration is primarily a way to dispose of waste, but the heat generated from this process can be used to generate electricity."
 }
+
+
+
+
 
 Tactical Cardset: 
 [(n+3) of each of the following, where n is the number of players]
@@ -138,6 +149,10 @@ Reduce the NRG Goal by 7 points.  Until the end of the round, no player may acti
 "Earth Day is an annual event, celebrated on April 22, on which events are held worldwide to demonstrate support for environmental protection.  Its celebrated in more than 192 countries around the world. -Wikipedia"
 }
 
+
+
+
+
 [Service cards] 
 Sustainability Center {
 http://archpaper.com/uploads/image/eli_broad_museum_06.jpg
@@ -155,6 +170,7 @@ Success (9+)
 	+X $
 "An electrical grid is an interconnected network for delivering electricity from suppliers to consumers. It consists of generating stations that produce electrical power, high-voltage transmission lines that carry power from distant sources to demand centers, and distribution lines that connect individual customers. -Wikipedia"
 }
+
 Scrubbing Tower:{
 http://www.rubbersealing.com/TCI/images/upload/Image/scrubbing%20and%20absorption%20tower.jpg
 Success (9+)
