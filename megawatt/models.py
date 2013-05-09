@@ -24,18 +24,14 @@ class Card(models.Model):
 
 
 class GameState(models.Model):
-    p1 = models.ForeignKey(Player)
-    p2 = models.ForeignKey(Player)
-    p1_hand={}
-    p2_hand={}
-    p1_field={}
-    p2_field={}
+    player1_hand={}
+    player2_hand={}
+    player1_field={}
+    player2_field={}
     player_cards = {}
     neutral_cards= {}
     tactical_deck=[]
     e_gen_deck=[]
-    p1_score = models.ForeignKey(PointSet)
-    p2_score = models.ForeignKey(PointSet)
     active_player = ("p1","p2")
     phase = ("U","B","R","I","G","R")
     
