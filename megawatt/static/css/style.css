@@ -6,6 +6,7 @@ body {
 	color: #fff;
 	display: block;
 	float: left;
+	font-family: "Arial", sans-serif;
 }
 
 #center {
@@ -16,19 +17,6 @@ body {
 	width: 27%;
 }
 
-#right {
-	width: 14%;
-}
-	
-	
-.pane {
-	background:#222;
-	height: 100%;
-	margin: 8px;
-	float: left;
-	display: block;
-}
-
 #left #preview {
 	width:100%;
 	height: 81.5%;
@@ -36,6 +24,51 @@ body {
 	margin: 8px 0px;
 }
 
+#p1_overlay {
+	position: absoloute;
+	top: 0px;
+	right: 0px;
+	z-index: 10000;
+}
+
+#p2_overlay{
+	position: absoloute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 10000;
+}
+
+#phase_box {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#right {
+	width: 14%;
+}
+
+#scoreboard {
+	height: 7%;
+	width: 80%;
+	margin-bottom: 10px;
+	margin-left:10%;
+	padding: .5% 0px;
+	background: #333;
+	display: block;
+	float: left;
+}
+
+#next_button {
+	float:right;
+	display: block;
+	width:8%;
+	height:100%;
+}
+
+#next_button img{
+	width: 70%;
+	float:right;
+}
 #neutral_field {
 	margin: 8px 0px;
 }
@@ -56,13 +89,13 @@ body {
 .deck {
 	height: 33.3%;
 	background: #333333;
-	margin: 4px 0px;
+	margin: 6px 0px;
 }
 
 .field {
 	width: 100%;
-	height: 29.7%;
-	padding: 8px 0px;
+	height: 27.75%;
+	padding: .5% 0px;
 	background: #333;
 	float: left;
 }
@@ -71,7 +104,7 @@ body {
 	height: 15%;
 	widht: 100%;
 	background: #333333;
-	margin: 4px 0px;
+	margin: .5% 0px;
 }
 
 .menu {
@@ -84,6 +117,40 @@ body {
 	font-size: 15pt;
 	color: white;
 }
+
+.nrg_label {
+	width: 170px;
+	font-size: 12pt;
+	margin: 0 auto;
+}
+@media (max-width: 853px){
+	.nrg_label {
+		font-size:9pt;
+	}
+}
+.overlay {
+    position: fixed;
+    width: 50%;
+    height: 20%;
+    background-color: #666666;
+    z-index: 10000;
+}
+
+.pane {
+	background:#222;
+	height: 100%;
+	margin: .5%;
+	float: left;
+	display: block;
+}
+
+.phase_label {
+	display: block;
+	float: left;
+	margin: 0px 5px;
+	font-size: 9pt;
+}
+
 .points {
 	width:100%;
 	height: 8%;

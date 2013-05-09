@@ -8,13 +8,19 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 def index(request):
    
+    places=[0]*10
+    places[0]="p1_field"
+    places[1]="p2_field"
+    places[3]="p1_hand"
+    places[4]="p2_hand"
+    places[5]="neutral_field"
     cards ={}
     for i in range(0,15):
         name=i
         card = Card()
         card.id = i
         card.name= "card"+ str(i)
-        card.field = "p2_field"
+        card.field = places[i%6]
         if i%2 ==1:
             card.image = "http://a.dryicons.com/images/icon_sets/colorful_stickers_part_2_icons_set/png/256x256/light_bulb.png"
         else:
@@ -44,6 +50,13 @@ def index(request):
     p2.append(("user", icons["user"], ps2.user))
     p2.append(("icons", icons["dollar"], ps2.dollar))
     
+    phases = []
+    phases.append(("Upkeep","U", True))
+    phases.append(("Bidding","B",False))
+    phases.append(("Reveal","R",False))
+    phases.append(("Installation","I",False))
+    phases.append(("Generation","G",False))
+    phases.append(("Reconciliation","R",False))
     
     return render_to_response(
               'index.html',
@@ -53,6 +66,8 @@ def index(request):
                'icons':icons,
                'p1':p1,
                'p2':p2,
+               'nrg_goal':"11",
+               'phases': phases,
                })
     
 @csrf_exempt

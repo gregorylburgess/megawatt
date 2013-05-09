@@ -1,0 +1,188 @@
+####[Game Rules](https://github.com/gregorylburgess/megawatt/wiki/GameRules)
+####Cards
+E_Gen Cardset: 
+[n copies of each of the following, where n is the number of players]:
+
+Solar Farm{
+https://www.getsolar.com/userfiles/image/Solar%20Panel%20Array.jpg
+Success (7+)
+	+2 NRG
+	+2 $
+"A 1 square-meter solar panel can output 100-200 watts of power in peak daylight."
+}
+Wind Farm {
+http://69.89.31.152/~altdaily/images/cmigration/windfarm-5-symbols-17870.jpg
+Success (6+)
+	+2 NRG
+	+2 $
+"One 1.8 MW wind turbine at a reasonable site would produce over 4,700,000 kWh of electricity each year, enough to meet the annual needs of over 1,000 households." -Strathclyde University statistic) 
+}
+Nuclear Power Plant: {
+http://www.arabianbusiness.com/incoming/article373922.ece/ALTERNATES/g3l/nuclear+plant.jpg
+Success (8+)
+	+5 NRG
+	+5 $
+Fail
+	-3 [env_points]
+	-2 [user_points]
+"Nuclear plant work by using heat from nuclear decay to heat water into steam and turn a turbine which generates electricity."
+}
+Hydro-Electric Dam: {
+http://www.proactiveinvestors.co.uk/genera//img/companies/news/hydroelectric350_4a4873c99e81a.jpg
+Success (7+)
+	+3 NRG
+	+3 $
+Hydro electricity is "a flexible source of electricity since plants can be ramped up and down very quickly to adapt to changing energy demands. However, damming ... can harm local ecosystems, and building large dams and reservoirs often involves displacing people and wildlife. -Wikipedia"
+}
+Tidal Generator: {
+http://www.solarpowernotes.com/renewable-energy/tidal-energy/tidal-energy-generator-seag.jpg
+Success (8+)
+	+2 NRG
+	+2 $
+"Tides are more predictable than wind energy and solar power, but harnessing Tidal energy tends to be more expensive than either. -Wikipedia"
+}
+Geo-Thermal Plant: {
+http://newsimg.bbc.co.uk/media/images/45579000/jpg/_45579485_lavalake.jpg
+Success (7+)
+	+3 NRG
+	+3 $
+"The emission intensity of existing geothermal electric plants is on average 122 kg of CO2 per megawatt-hour (MW·h) of electricity, about one-eighth of a conventional coal-fired plant -Wikipedia"
+}
+Biomass Plant: {
+http://assets.inhabitat.com/files/Teesside-Biomass-Power-Plant-1.jpg
+Success (8+)
+	+3 NRG
+	+3 $
+"Because biomass technologies use combustion processes to produce electricity, they can generate electricity at any time, unlike wind and most solar technologies, which only produce when the wind is blowing or sun is shining. Biomass power plants currently represent 11,000 MW - the second largest amount of renewable energy in the nation. -powerscorecard.org"
+}
+Coal-Burning Power Plant: {
+http://blog.enn.com/wp-content/uploads/2009/06/smoke-stack-jj-00112.jpg
+Success (8+)
+	-X $
+	-X [env_points]
+	+X NRG
+"Coal generates 44% of our electricity, and is the single biggest air polluter in the U.S. -ucsusa.org"
+}
+[3n copies of each of the following, where n is the number of players]:
+Peaker Plant: {
+http://blogs.democratandchronicle.com/520/files/2009/12/smoke-stack.jpg
+Success (6+)
+	- 2 $
+	- 1 [env_points]
+	+ 2 NRG
+"[Peaker plants] are power plants that generally run only when there is a high demand, known as peak demand, for electricity. Because they supply power only occasionally, the power supplied commands a much higher price per kilowatt hour -wikipedia"
+}
+Incinerator: {
+http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Kwai_Chung_Incineration_Plant.jpg/300px-Kwai_Chung_Incineration_Plant.jpg
+Success (8+)
+	-1 [env_points]
+	+2 $
+	+2 NRG
+"Incineration is primarily a way to dispose of waste, but the heat generated from this process can be used to generate electricity."
+}
+
+Tactical Cardset: 
+[(n+3) of each of the following, where n is the number of players]
+
+Govt grant:{
+http://www.psychologytoday.com/files/u759/money_stack.jpg
+Treat this card as $5.  You may only use this card to pay a single [-$] cost, or to bid on a single [E_gen] card.  
+"Between 2005 through 2009, the U.S. government spent $96.3 billion on about 60 different subsidies that were directed at increasing energy production, subsidizing energy consumption , or increasing energy efficiency."
+-U.S. Energy Subsidies:Effects on Energy Markets and Carbon Dioxide Emissions
+}
+
+Protest:{
+http://graphics8.nytimes.com/images/2007/08/07/nyregion/07protest.span.jpg
+Play this card on any owned [E_gen] card an opponent controls.  During each upkeep, the owner of the [E_gen] card to which this card is attached my attempt to remove it by rolling a [9+].
+"Show me the country that has no strikes and I'll show you the country in which there is no liberty. -Samuel Gompers"
+}
+
+Meteorological Shift:{
+http://upload.wikimedia.org/wikipedia/commons/e/ef/USA_weather_forecast_2006-11-07.gif
+Play this card on an opponent's Solar Farm, or Wind Farm.  The affected [E_gen] card may not be used this turn.
+"Solar panels and wind turbines are sometimes called 'unstable' energy sources, since their energy production varies with the weather."
+}
+
+Freak Accident:{
+http://blogs.unity3d.com/wp-content/uploads/2009/07/explosion.jpg
+Play this card on any owned [E_gen] card an opponent controls.  The owner of the affected [E_gen] card gets -1 [user_point].  During each upkeep, the owner of the affected [E_gen] card my attempt to remove it by rolling a [10+].  
+"Oops..."
+}
+
+Carbon offsets:{
+http://sierraclub.typepad.com/.a/6a00d83451b96069e2011570b8c9a1970b-400wi
+Spend $X to prevent the loss of X [env_points] this turn.
+"Groups, individuals, and organizations buy carbon offsets to makeup for greenhouse gas emissions they generate.  Revenue from selling carbon offsets goes to support energy related initiatives."
+}
+
+Scrubbers:{
+http://www.tank-projects.com/gifs/scrubbing-tower.jpg
+Play this card on an [E_gen] card.  Reduce any [env_point] loss caused by the affected [E_gen] card by 1..  Limit: 1 scrubber per [E_gen] card
+"A carbon dioxide scrubber is a device which absorbs carbon dioxide (CO2). It is used to treat exhaust gases from industrial plants or from exhaled air in life support systems such as rebreathers or in spacecraft, submersible craft or airtight chambers -Wikipedia"
+}
+
+Environmental Ad Campaign:{
+http://s3.amazonaws.com/materialicious2/images/ad-campaign-for-plant-for-the-planet-uses-cut-leaf-art-m.jpg?1327876338
+Players who lose [env_points] this turn lose 1[user_point] per [env_point] lost.
+“Oh Beautiful for smoggy skies, insecticided grain,
+For strip-mined mountain's majesty above the asphalt plain.
+America, America, man sheds his waste on thee,
+And hides the pines with billboard signs, from sea to oily sea.
+-George Carlin” 
+}
+
+
+Promote Earth Day:{
+http://www.theholidayspot.com/earth_day/images/earth_day.jpg
+Reduce the NRG Goal by 7 points.  Until the end of the round, no player may activate [E_gen] cards that would cause them to lose [env_points].
+"Earth Day is an annual event, celebrated on April 22, on which events are held worldwide to demonstrate support for environmental protection.  Its celebrated in more than 192 countries around the world. -Wikipedia"
+}
+
+[Service cards] 
+Sustainability Center {
+http://archpaper.com/uploads/image/eli_broad_museum_06.jpg
+Pay $10 to play this card.
+Success (8+)
+	 -5[NRG] 
+	+2 [user_points]
+"“Whatever the cost of our libraries, the price is cheap compared to that of an ignorant nation. ― Walter Cronkite”
+}
+
+Energy-Market:{
+http://www.francemagazine.org/images/articles/issue_62/62_auction_01_h.jpg
+Success (9+)
+	-X[NRG] 
+	+X $
+"An electrical grid is an interconnected network for delivering electricity from suppliers to consumers. It consists of generating stations that produce electrical power, high-voltage transmission lines that carry power from distant sources to demand centers, and distribution lines that connect individual customers. -Wikipedia"
+}
+Scrubbing Tower:{
+http://www.rubbersealing.com/TCI/images/upload/Image/scrubbing%20and%20absorption%20tower.jpg
+Success (9+)
+	-X [NRG] points, 
+	+X/2 [env_points] (rounded down)
+"'Baseload' or 'baseload demand' is the minimum amount of power that a utility or distribution company must make available to its customers ... to meet minimum demands based on reasonable expectations of customer requirements. Baseload values typically vary from hour to hour in most commercial and industrial areas.  -Wikipedia
+}
+
+Announce Energy Rationing:{
+http://images.politico.com/global/news/110831_demint_speech_ap_328.jpg
+Success (8+)
+	-2 [user_points] 
+	+3[NRG] 
+"Watts are a measure of power, Watt-hours are a measure of energy.  A heater rated at 1000 watts (1 kilowatt), operating for one hour uses one kilowatt-hour of energy."
+}
+
+Support Sustainability Research:{
+http://www.tages.biz/includes/htmlarea/assets/images/researcher-MC.jpg
+Success(7+)
+	-X $
+	+X/3 [env_points] (rounded down)
+"A 'phantom load' or 'vampire load' refers to the small ammount of energy that many appliances draw despite being turned "off".  To solve this, simply unplug the device."
+}
+
+Allow Net Metering:{
+http://www.crestock.com/image/2510414-power-meter.aspx
+Success(8+)
+	-5 $
+	+5[NRG]
+"Net metering is an electricity policy for consumers who own (generally small) renewable energy facilities (such as wind, solar power, or home fuel cells)...Under net metering, a system owner receives retail credit for ... the electricity they generate. -Wikipedia"
+}
